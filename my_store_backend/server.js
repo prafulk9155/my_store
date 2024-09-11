@@ -16,6 +16,8 @@ app.use(express.json());
 // Connect to MongoDB
 connectDB();
 
+const paymentRoutes = require('./routes/paymentRoutes'); // Adjust path as necessary
+app.use('/api', paymentRoutes)
 // Use routes
 app.use('/api/products', productRoutes); // Base endpoint for product routes
 app.use('/api/users', userRoutes); // Base endpoint for user routes
